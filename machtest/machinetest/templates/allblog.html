@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>allblog</title>
+</head>
+<body>
+
+<form>
+    {% for i in data %}
+    <label>title</label>
+    <p>{{i.title}}</p>
+    <img src="{{i.image.url}}" style="height: 50px;width: 50px" >
+    <label>description</label>
+    <p>{{i.description}}</p>
+    {% endfor %}
+
+
+</form>
+
+</body>
+</html>

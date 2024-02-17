@@ -1,0 +1,27 @@
+{% extends 'userhome.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Blogs</h1>
+<table class="table table-striped">
+    <thead>
+    <th>TITLE</th>
+    <th>IMAGES</th>
+    <th>DESCRIPTION</th>
+    <th></th>
+    </thead>
+    <tbody>
+
+    <tr>
+    <td>{{data.title}}</td>
+    <td>{{data.image}}</td>
+    <td>{{data.description}}</td>
+     <td>
+        <a href="{% url 'editblog' blogid=datas.id %}" ><button type="button" class="btn btn-outline-success" >Edit</button></a>
+        <a href="{% url 'deleteblog' blogid=datas.id %}" ><button type="button" class="btn btn-outline-danger" >Delete</button></a></td>
+    </tr>
+
+    </tbody>
+</table>
+
+{% endblock %}

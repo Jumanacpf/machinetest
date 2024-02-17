@@ -1,0 +1,17 @@
+{% extends 'userhome.html' %}
+{% load static %}
+{% block content %}
+
+<form method="post" action="{% url 'createblog' %}" enctype="multipart/form-data" style="text-align: center">
+    {% csrf_token %}
+     <h1>Blogs</h1>
+    <label>Title : </label>
+    <input type="text" name="title"><br><br>
+    <label>Image : </label>
+    <input type="file" name="image"><br><br>
+    <label>Description : </label>
+    <input type="text" name="description"><br><br>
+    <input class="btn btn-outline-dark" type="submit" value="Add"><br><br>
+
+</form>
+{% endblock %}
